@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn{
+    padding: 10px;
+}
