@@ -8,8 +8,8 @@ const App = ()=>{
   return(
     <>
       <h1>Hello This is App Component</h1>
-      {/* <Hooks/> */}
-      <Props/>
+      <Hooks/>
+      {/* <Props/> */}
     </>
   )
 }
