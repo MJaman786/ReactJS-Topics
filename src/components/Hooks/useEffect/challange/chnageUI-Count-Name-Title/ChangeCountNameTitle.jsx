@@ -10,6 +10,7 @@ export default function UseEffectChallengeUI() {
   // now useEffect for updating the title when count chnages
   useEffect(() => {
     document.title = `count: ${count}`
+    console.log(`value of Count: ${count}`);
   }, [count])
   return (
     <div
