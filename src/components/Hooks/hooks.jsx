@@ -8,10 +8,10 @@ const Hooks = () => {
     return (
         <>
             {/* <UseSateHook/> */}
-            {/* <UseEffect/> */}
+            <UseEffect/>
             {/* <UseContext/> */}
             {/* <UseReducer/> */}
-            <ReducerHook />
+            {/* <ReducerHook /> */}
         </>
     )
 }

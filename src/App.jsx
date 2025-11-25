@@ -7,7 +7,7 @@ import Props from "./components/Props/props.jsx";
 const App = ()=>{
   return(
     <>
-      <h1>Hello This is App Component</h1>
+      {/* <h1>Hello This is App Component</h1> */}
       <Hooks/>
       {/* <Props/> */}
     </>
