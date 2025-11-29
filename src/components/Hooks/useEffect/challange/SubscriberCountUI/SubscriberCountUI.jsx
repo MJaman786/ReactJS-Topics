@@ -10,7 +10,7 @@ export default function SubscriberCountUI() {
   useEffect(() => {
     const id = setInterval(() => {
       setSubscriber(prev => prev + 1); // always gets latest value
-    }, 1000);
+    }, 100);
 
     return () => clearInterval(id); // cleanup
   }, []);
@@ -47,7 +47,7 @@ export default function SubscriberCountUI() {
 
         {/* You will replace "00000" with your dynamic subs count */}
         <p style={{ fontSize: "3rem", fontWeight: "bold", color: "#4CC9F0" }}>
-          {subscriber}
+          + {subscriber}
         </p>
       </div>
     </div>
