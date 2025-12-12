@@ -8,3 +8,6 @@ export const fetchData = ()=>{
     return api.get('/posts');
 }
 
+export const getDetails = (id)=>{
+    return api.get(`/posts/${id}`);
+}

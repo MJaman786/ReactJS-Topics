@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Card from "../components/Card";
 import { fetchData } from "../api/api"; // Assuming this function exists
 import SkeletonCard from "./SkeletonCard";
+import { NavLink } from "react-router-dom";
 
 export default function FetchOld() {
 
@@ -27,7 +28,8 @@ export default function FetchOld() {
     // --- 2. Use React Query to manage fetch state ---
     const { data, isLoading, isError } = useQuery({ // Added isError for completeness
         queryKey: ['posts_ID'],
-        queryFn: getPostData
+        queryFn: getPostData,
+        staleTime: 10000
     })
 
     // --- 3. Simplified Conditional Rendering (The Easy Logic) ---
@@ -49,13 +51,16 @@ export default function FetchOld() {
     } else if (data && data.length > 0) {
         // If data is successfully loaded and not empty, show the cards
         displayContent = data.map((item) => (
-            <Card
-                key={item.id}
-                userId={item.userId}
-                id={item.id}
-                title={item.title}
-                body={item.body}
-            />
+            <NavLink key={item.id} to={`/posts/${item.id}`}>
+                <Card
+                    userId={item.userId}
+                    id={item.id}
+                    title={item.title}
+                    body={item.body}
+                    btnName = 'View Post'
+                    btnNav = '/'
+                />
+            </NavLink>
         ));
     } else {
         // If the fetch was successful but the data array is empty

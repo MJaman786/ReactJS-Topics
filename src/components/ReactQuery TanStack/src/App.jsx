@@ -4,6 +4,8 @@ import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import FetchOld from './pages/FetchOld'
+import Card from './components/Card'
+import PostDetails from './pages/PostDetails'
 
 export default function App() {
 
@@ -13,7 +15,8 @@ export default function App() {
       element: <MainLayout />,
       children: [
         { path: '/', element: <Home /> },
-        { path: '/fetchold', element: <FetchOld /> }
+        { path: '/fetchold', element: <FetchOld /> },
+        { path: '/posts/:id', element: <PostDetails /> }
       ]
     }
   ])

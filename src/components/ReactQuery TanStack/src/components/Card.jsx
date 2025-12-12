@@ -1,4 +1,6 @@
-export default function Card({ userId, id, title, body }) {
+import { NavLink } from "react-router-dom";
+
+export default function Card({ userId, id, title, body, btnName, btnNav }) {
     return (
         <>
             <div className="bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-700">
@@ -30,13 +32,15 @@ export default function Card({ userId, id, title, body }) {
                     </p>
 
                     {/* Action Button */}
-                    <button
-                        className="mt-5 inline-flex items-center text-indigo-400 font-semibold text-sm hover:text-indigo-300 transition-colors"
-                    >
-                        {/* Read Full Post Icon Placeholder */}
-                        <svg className="h-4 w-4 mr-1">...</svg>
-                        Read Full Post
-                    </button>
+                    <NavLink to={btnNav}>
+                        <button
+                            className="mt-5 inline-flex items-center text-indigo-400 font-semibold text-sm hover:text-indigo-300 transition-colors"
+                        >
+                            {/* Read Full Post Icon Placeholder */}
+                            <svg className="h-4 w-4 mr-1">...</svg>
+                            {btnName}
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         </>
