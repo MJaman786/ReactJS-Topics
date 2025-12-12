@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-16">
+    <div className="min-h-screen bg-green-400 flex items-center justify-center py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Hero Headline */}
